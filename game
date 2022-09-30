@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+
+    int SecretNumber = 5;
+    int guess;
+    int LimitGuess = 3;
+    int all_guess = 0;
+    int broke = 0;
+
+    while(SecretNumber != guess && broke == 0) {
+        if (all_guess < LimitGuess) {
+            printf("Enter your number: ");
+            scanf("%d", &guess);
+            all_guess++;
+        } else {
+            broke = 1;
+        }
+    }
+    if (broke == 1) {
+        printf("You lose( ");
+    } else {
+        printf("You win! ");
+    }
+    return 0;
+}
