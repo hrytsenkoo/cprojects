@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+  int low, step, up;
+  float cels, far;
+
+  low = 0;
+  step = 20;
+  up = 300;
+
+  cels = low;
+
+  while (cels <= up) {
+    far = (9.0/5.0) * cels+32;
+    printf("%3.0f %6.1f\n", cels, far);
+    cels = cels + step;
+
+  }
+
+}
